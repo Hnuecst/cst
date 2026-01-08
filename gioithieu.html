@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Giới thiệu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  width:90%;
+  max-width:420px;
+  padding:32px 28px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  animation: fadeUp 0.8s ease;
+}
+
+.card img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card h1{
+  font-size:24px;
+  margin-bottom:8px;
+  color:#111;
+}
+
+.card p{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.card button{
+  padding:12px 24px;
+  border:none;
+  border-radius:999px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card button:hover{
+  transform: translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" style="width: 90%;max-width: 600px;">
+  <img src="favicon.png" alt="avatar">
+  <h1>Xin chào 👋</h1>
+  <p style="font-size: 16px;color: #111;">
+    Hiện tại mình có 1 sản phẩm giúp mọi người lưu trữ dữ liệu . 
+  </p>
+  <p  style="font-size: 16px;color: #111;" >
+    Giúp mọi người có thể lưu trữ dữ liệu cá nhân một cách an toàn và tiện lợi trên nền tảng đám mây. 
+  </p>
+  <a href=""><button style="background: linear-gradient(135deg, #ff9800, #f44336);
+  color: #fff;font-weight: 600;">Khám phá</button></a>
+  <a href="https://cst.hnue.edu.vn/"><button> Quay lại CST</button></a>
+</div>
+
+</body>
+</html>

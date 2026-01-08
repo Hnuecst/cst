@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>HNUE LMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  height:100vh;
+  overflow:hidden;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper{
+  display:flex;
+  height:100vh;
+}
+
+/* ===== LEFT ===== */
+.left{
+  flex:1;
+  background:url("Screenshot 2026-01-08 182202.png")center / cover no-repeat; ;
+  position:relative;
+  color:#fff;
+}
+
+
+.logo{
+  position:absolute;
+  top:20px;
+  left:30px;
+  font-weight:600;
+  z-index:2;
+}
+
+.left-content{
+  position:absolute;
+  bottom:120px;
+  left:60px;
+  z-index:2;
+}
+
+.left-content .small{
+  color:#ffb84d;
+  font-weight:600;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.left-content h1{
+  font-size:48px;
+  font-weight:800;
+  line-height:1.2;
+}
+
+/* ===== RIGHT ===== */
+.right{
+  width:445px;
+  background:#fff;
+  padding:40px 30px;
+  overflow-y:auto;
+}
+
+.right h3{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:30px;
+}
+
+/* ===== INPUT WITH ICON ===== */
+.input-box{
+  position:relative;
+  margin-bottom:16px;
+}
+
+.input-box input{
+  width:100%;
+  padding:12px 14px 12px 42px;
+  border-radius:6px;
+  border:1px solid #d9d9d9;
+  background:#f5f8ff;
+  font-size:14px;
+}
+
+.input-box input:focus{
+  outline:none;
+  border-color:#4a7dff;
+  background:#fff;
+}
+
+/* ICON */
+.icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  opacity:0.6;
+  pointer-events:none;
+}
+
+.icon.user{
+  background:url("https://cdn-icons-png.flaticon.com/512/1077/1077114.png") center/contain no-repeat;
+}
+
+.icon.key{
+  background:url("https://cdn-icons-png.flaticon.com/512/159/159604.png") center/contain no-repeat;
+}
+
+/* ===== OTHER ===== */
+.forgot{
+  text-align:right;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.forgot a{
+  text-decoration:none;
+  color:#555;
+}
+
+.btn{
+  width:100%;
+  padding:12px;
+  background:#0b4fd6;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  margin:15px 0;
+}
+
+.divider{
+  text-align:center;
+  font-size:13px;
+  color:#888;
+  margin:20px 0;
+}
+
+.sso{
+  border:1px solid #ddd;
+  padding:10px;
+  text-align:center;
+  border-radius:6px;
+  cursor:pointer;
+  transition: all 0.3s ease;
+}
+.sso img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.preview{
+  margin-top:25px;
+}
+.remember-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:16px 0;
+  font-size:14px;
+}
+
+/* SWITCH */
+.switch{
+  position:relative;
+  display:inline-block;
+  width:42px;
+  height:22px;
+}
+
+.switch input{
+  opacity:0;
+  width:0;
+  height:0;
+}
+
+.slider{
+  position:absolute;
+  cursor:pointer;
+  inset:0;
+  background:#ccc;
+  border-radius:22px;
+  transition:0.3s;
+}
+
+.slider::before{
+  content:"";
+  position:absolute;
+  height:18px;
+  width:18px;
+  left:2px;
+  bottom:2px;
+  background:#fff;
+  border-radius:50%;
+  transition:0.3s;
+}
+
+/* CHECKED */
+.switch input:checked + .slider{
+  background:#22c55e; /* xanh giống ảnh */
+}
+
+.switch input:checked + .slider::before{
+  transform:translateX(20px);
+}
+
+.preview img{
+  width:100%;
+  border-radius:8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .left{display:none;}
+  .right{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- LEFT -->
+  <div class="left">
+    
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right" style="margin-top: 40px;">
+    <img src="Screenshot 2026-01-08 182116.png" alt="" style="width: 95%;margin-bottom: 30px;cursor: pointer;margin-left: 5px;">
+
+    <div class="input-box">
+      <span class="icon user"></span>
+      <input type="text" placeholder="Tên đăng nhập/email">
+    </div>
+
+    <div class="input-box">
+      <span class="icon key"></span>
+      <input type="password" placeholder="Mật khẩu">
+    </div>
+
+    <div class="forgot">
+      <a href="#" style="font-size: 13px;color: rgb(164, 160, 163);">Bạn quên tên đăng nhập hoặc mật khẩu?</a>
+    </div>
+
+    <a href="https://anndko.github.io/hack/"><button class="btn">Đăng nhập</button></a>
+
+    <div class="remember-wrap" style="display: flex; display:flex;justify-content: flex-end;">
+        <label class="switch">
+            <input type="checkbox" style="width: 5px;">
+            <span class="slider" style="width: 40px;"></span>
+        </label>
+        <span class="remember-text">Nhớ tên tài khoản</span>
+        </div>
+        <hr style="height: 1px;
+  background-color: #e0e0e0;
+  border: none;margin: 40px 0px;">
+
+    <div class="divider" style="color: #141313;font-size: 15px;">Đăng nhập bằng tài khoản của bạn trên:</div>
+
+    <div class="sso" style="border: none;">
+        <img src="image.png" alt="" style="margin-right: 80%;">
+    </div>
+
+    <div class="preview">
+      <img src="Screenshot 2026-01-08 190651.png">
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
